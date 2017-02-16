@@ -1,0 +1,12 @@
+[2017-02-16 15:40:13,312] {42} INFO - User searched for <n>='favicon.ico'
+[2017-02-16 15:40:13,313] {75} WARNING - 404 - Not Found, /<n> not an integer. URL=oskarjansson.com/favicon.ico
+[2017-02-16 15:42:33,655] {42} INFO - User searched for <n>='18'
+[2017-02-16 15:42:37,339] {42} INFO - User searched for <n>='10'
+[2017-02-16 15:42:42,511] {42} INFO - User searched for <n>='1'
+[2017-02-16 15:42:53,891] {42} INFO - User searched for <n>='1'
+[2017-02-16 15:44:05,316] {42} INFO - User searched for <n>='mail'
+[2017-02-16 15:44:05,316] {75} WARNING - 404 - Not Found, /<n> not an integer. URL=oskarjansson.com/mail
+[2017-02-16 15:44:28,407] {42} INFO - User searched for <n>='7354'
+[2017-02-16 15:44:28,408] {75} WARNING - 404 - Not Found, 404 - Not Found. URL=oskarjansson.com/7354
+[2017-02-16 15:44:33,341] {42} INFO - User searched for <n>='dick'
+[2017-02-16 15:44:33,341] {75} WARNING - 404 - Not Found, /<n> not an integer. URL=oskarjansson.com/dick

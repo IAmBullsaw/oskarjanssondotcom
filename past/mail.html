@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Oskar's Homepage - Mail</title>
+  {% include 'head.html' %}
+</head>
+<body>
+  <h1>Mail</h1>
+  <p>You could mail via a POST to this adress or via the form below</p>
+  <p>Via POST these parameters are required:</p>
+  <ul>
+    <li>'name' - Your name</li>
+    <li>'email' - Your email</li>
+    <li>'subject' - The subject</li>
+    <li>'body' - The email body</li>
+  </ul>
+  {% include 'form_mail.html' %}
+</body>
+</html>

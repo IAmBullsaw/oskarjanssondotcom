@@ -23,7 +23,13 @@
       "What you see before your very eyes is my own design, made from scratch.",
       "I can't say that this is perfect design nor perfectly made. However, I actually did it! I can barely believe it. All these times I've made shitty websites and now this: The best of the shitty websites!",
       "How did I do it then?",
-      "I had to start somewhere so I actually started with the smallest piece, this Card."
+	"I had to start somewhere so I actually started with the smallest piece, this Card.",
+	"card.py is responsible for the data this card holds, such as this text, paths to header image and the possibility to hold even more pictures (However I have not implemented this in any card. (Yet...))",
+	"After building a cardclass I began building the website implementation in Flask. This part was actually really fun since I've been working with Flask before and everything just came together, but as a horrible eye-sore since no CSS were applied. That was the next step.",
+	"I think I wrestled with the CSS like a madman. I have yet to try out Less, Sass and all those really nice tools. I just went at it like a caveman. After an insane amount of headache inducing 'width: 100%', I found out that the smart thing is to divide the website in rows and columns. This helped an insane amount with the overall size issues I had... We should however not talk about designing mobile-friendly websites. That is a thing of this sites future.",
+	"To make the cards act like I wanted them to I had to use Javascript. Before I continue to ramble on and on, I feel like I have to tell you that I never intended to use Javascript for a website. Somehow it feels that a website only gets more complicated to use when one needs to take this magical tool in use. However, I wanted to try this card-thing out!",
+	"So, I made one function to 'flip over' and show its back. With some CSS magic I made it grow into a larger thing, the one you're reading now. I am still not sure if this is a good move. It was however fun and some of my friends actually said 'Hey, that is nice'. I am already thinking about a simpler website design, but scrolling sideways, that's something else, isn't it?",
+	"Well well. Next thing to implement here, besides one of the million things I want to do, is the mobile-friendly css. I am however surprised that the side-scrolling magically works 'At least on my machine'-style."
       ],
     "_title": "Hello World",
     "_id": 1
@@ -35,13 +41,11 @@
       ["face.png", "It's a me!"]
       ],
     "_text": [
-      "This is the backside of the last card.",
-      "Congratulations!",
-      "So there's a picture of me.",
-      "Now, would you kindly look into my eyes and stare into my soul.",
-      "Do you feel it?",
-      "I did."
-      ],
+	"This is the backside of the last card.",
+	"Congratulations!",
+	"I never thought anyone would actually get this far. Anywho top picture is, as your probably thought out, a picture of me.",
+	"It is a picture from that one time in San Fransisco. It's a really nice town, you should go if you have the possibility."
+    ],
     "_title": "The Last Card",
     "_id": 2
   }

@@ -35,6 +35,30 @@
     "_id": 1
   },
   {
+    "_description": "A script language created without the need for shift",
+    "_unread": false,
+    "_images": [
+      ["no-shift.png", "no-shift logo"]
+      ],
+    "_text": [
+      "no-shift is a script language I and Magnus Jansson (sadly, we're not related.) created. All files ending with '.ns' is parsed with parser written in ruby which translated the program via extensive rules, defined by the no-shift EBNF. The translation resulted in a node tree which could be evaluated at any time.",
+	"Our goal was to create a language where you never needed to use shifted characters on the keyboard, therefore the only valid characters were:",
+	"abcdefghijklmnopqrstuvwxyz‘-.,<+",
+	"and this limitation made the task horribly tough and really fun since we lost a lot of delimiters such as, (), [] and {}. It turned out that delimiters would help really really much...",
+	"A small code example, which also demonstrates the third bool maybe: ",
+	"",
+	"<< A program that might print 'Hello World' in the terminal <<",
+	"message isnow ‘Hello’",
+	"message isnow message inc ‘ world!’",
+	"if maybe then output message ifnot then nope",
+	"no-shift got a quite extensive EBNF grammar however not all were implemented due to loss of time.",
+	"The slideshow from the official presentation of no-shift were published on no-shift.com,  the webpage is sadly not online anymore. On the bright side, here is a link to the presentation:",
+	"https://goo.gl/4J41nR"
+      ],
+    "_title": "no-shift",
+    "_id": 2
+  },
+  {
     "_description": "Last Card",
     "_unread": false,
     "_images": [
@@ -47,6 +71,6 @@
 	"It is a picture from that one time in San Fransisco. It's a really nice town, you should go if you have the possibility."
     ],
     "_title": "The Last Card",
-    "_id": 2
+    "_id": 3
   }
 ]

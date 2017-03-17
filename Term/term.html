@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+
+  <script>
+    isCommand = function(cmd) {
+    let answer = false;
+    if (cmd === "ll" ) {
+    answer = true;
+    }
+    return answer;
+    }
+    
+    onEnter = function() {
+    let f = document.getElementById("terminput");
+    let d = document.getElementById("termoutput");
+    let text = f.elements[0].value;
+    f.elements[0].value = "";
+    let p = document.createElement("p");
+    let t = document.createTextNode(text);
+    
+    if (isCommand(text)) {
+    console.log("FUN");
+    } else {
+    console.log("NO FUN");
+    }
+    
+    p.appendChild(t);
+    d.appendChild(p);
+    } 
+  </script>
+</head>
+<body>
+  <div id="termoutput">
+  </div>
+  <form id="terminput" action="javascript:onEnter()">
+    <input type="text">
+  </form>
+</body>

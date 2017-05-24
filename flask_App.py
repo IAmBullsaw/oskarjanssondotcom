@@ -36,10 +36,6 @@ def git():
 def contact():
     return render_template('contact.html')
 
-@app.route('/wallpaper/')
-def wallpaper():
-    return render_template('wallpaper.html')
-
 @app.route('/<n>')
 def number(n):
     """ Renders index page with specific card enhanced, 404 if none found. Handles /random """

@@ -13,7 +13,7 @@ d = Data()
 def index():
     d.load_JSON('data.json')
     cards = d.get_cards()
-    return render_template('index.html', cards = cards, n = None)
+    return render_template('index.html', cards = cards, n = None, c_length=len(cards))
 
 @app.route('/random/')
 def random_card():
@@ -55,7 +55,7 @@ def number(n):
 
     # Serve indexpage with project enhanced
     if (n >= 0 and n < len(cards)):
-        return render_template('index.html',cards = cards, n = n)
+        return render_template('index.html',cards = cards, n = n, c_length=len(cards))
     else:
         return error_404("404 - Not Found","Helpful tip: Try something more like 0 - {}.".format(len(cards)-1))
 

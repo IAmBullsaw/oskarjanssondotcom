@@ -81,7 +81,7 @@
     </div>
         {% for card in cards %}
         <div id="card-{{card._id}}" class="col-3 card" onclick="openCard({{card._id}})">
-          <div class="card-top" style="background-image: url(../static/images/{{card.get_header_image()[0]}})">
+          <div class="card-top" style="background-image: url(../static/images/{{card.get_header_image()}})">
           </div>
           <div class="card-bottom">
             <h1>{{card._title}}</h1>
@@ -89,8 +89,13 @@
               <p class="description">{{card._description}}</p>
             </div>
             <div id="card-back-{{card._id}}" class="card-back hidden">
-              {% for text in card._text %}
-              <p class="text">{{text}}</p>
+              {% for what, c in card._content|batch(2)%}
+                {% if what == 'p'%}
+                <p class="text">{{c}}</p>
+                {% elif what == 'img'%}
+                <img src="../static/images/{{c.href}}" alt="{{c.alt}}">
+                <p class "image-text">{{c.image_text}}</p>
+                {% endif %}
               {% endfor %}
               <a class="card-close" href="javascript:closeCard()">Close Card</a>
             </div>

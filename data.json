@@ -1,6 +1,6 @@
 [
     {
-        "_id": 0,
+        "_id": 3,
         "_title": "Welcome",
         "_description": "Click on a card!",
         "_headerhref": "welcome.png",
@@ -12,7 +12,7 @@
         ]
     },
     {
-        "_id": 1,
+        "_id": 2,
         "_title": "Hello World",
         "_description": "I finally made this website and it turned out quite OK.",
         "_headerhref": "default.png",
@@ -31,7 +31,7 @@
        ]
     },
     {
-        "_id": 2,
+        "_id": 1,
         "_title": "no-shift",
         "_description": "A script language created without the need for shift",
         "_headerhref": "no-shift.png",
@@ -53,7 +53,7 @@
         ]
     },
     {
-        "_id": 3,
+        "_id": 0,
         "_title": "The Last Card",
         "_description": "Last Card",
         "_headerhref": "face.png",

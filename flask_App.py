@@ -56,6 +56,7 @@ def number(n):
     # Serve indexpage with project enhanced
     if (n >= 0 and n < len(cards)):
         return render_template('index.html',cards = cards, n = n, c_length=len(cards))
+        return render_template('index.html',cards = cards, n = -(n+1), c_length=len(cards))
     else:
         return error_404("404 - Not Found","Helpful tip: Try something more like 0 - {}.".format(len(cards)-1))
 

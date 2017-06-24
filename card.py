@@ -46,3 +46,5 @@ class Card:
     def get_header_image(self):
         """ Header image is always the first image """
         return self._headerhref
+    def __repr__(self):
+        return "<Card {} {}>".format(self._id,self._title)

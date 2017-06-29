@@ -90,11 +90,13 @@
             </div>
             <div id="card-back-{{card._id}}" class="card-back hidden">
               {% for what, c in card._content|batch(2)%}
-                {% if what == 'p'%}
+                {% if what == 'p' %}
                 <p class="text">{{c}}</p>
-                {% elif what == 'img'%}
+                {% elif what == 'img' %}
                 <img src="../static/images/{{c.href}}" alt="{{c.alt}}">
                 <p class "image-text">{{c.image_text}}</p>
+                {% elif what == 'li' %}
+                <a href="{{c.href}}" alt="{{c.alt}}" target="_blank">{{c.alt}}</a>
                 {% endif %}
               {% endfor %}
               <a class="card-close" href="javascript:closeCard()">Close Card</a>

@@ -49,7 +49,10 @@
             "p", "if maybe then output message ifnot then nope",
             "p", "no-shift got a quite extensive EBNF grammar however not all were implemented due to loss of time.",
             "p", "The slideshow from the official presentation of no-shift were published on no-shift.com,  the webpage is sadly not online anymore. On the bright side, here is a link to the presentation:",
-            "p", "https://goo.gl/4J41nR"
+            "li", {
+                "alt": "noshift Google Slides presentation",
+                "href": "https://goo.gl/4J41nR"
+            }
         ]
     },
     {

@@ -23,12 +23,12 @@
             <div id="card-back-{{card._id}}" class="card-back hidden">
               {% for what, c in card._content|batch(2)%}
                 {% if what == 'p' %}
-                <p class="text">{{c}}</p>
+                <p class="card-back-text">{{c}}</p>
                 {% elif what == 'img' %}
-                <img src="../static/images/{{c.href}}" alt="{{c.alt}}">
-                <p class "image-text">{{c.image_text}}</p>
+                <img class="card-back-image" src="../static/images/{{c.href}}" alt="{{c.alt}}">
+                <p class "card-back-image-text">{{c.image_text}}</p>
                 {% elif what == 'li' %}
-                <a href="{{c.href}}" alt="{{c.alt}}" target="_blank">{{c.alt}}</a>
+                <p><a class="card-back-link" href="{{c.href}}" alt="{{c.alt}}" target="_blank">{{c.alt}}</a></p>
                 {% endif %}
               {% endfor %}
               <a class="card-close" href="javascript:closeCard()">Close Card</a>

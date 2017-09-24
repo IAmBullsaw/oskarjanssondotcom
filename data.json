@@ -89,9 +89,44 @@
         ],
         "_description": "I Designed the new KAMYA website",
         "_headeralt": "www.kamya.se",
-        "_headerhref": "www_kamya_se.bmp",
+        "_headerhref": "www_kamya_se.jpg",
         "_id": 3,
         "_title": "KAMYA website"
+    },
+    {
+        "_content": [
+            "p",
+            "So I made an editor for my card.json database that for these cards.",
+            "p",
+            "I used QTCreator for this project since I found it really easy to make something with this software, since i used it in a cool school project for a large company here in sweden,",
+            "li",
+            {
+                "alt": "Read about it here on my LinkedIn",
+                "href": "http:://www.oskarjansson.com/linkedin"
+            },
+            "p",
+            "so it was a no brainer using it on my spare time during this project.",
+            "p",
+            "I learned that it's quite tough to build an text editor even with so much help, finding out if a text field has been edited, how to know when to save data, what to do if the user is closing the editor and data has been changed et.c. There is a lot of things to think about.",
+            "p",
+            "However right now it's fully functional. I have yet to do some things, implementing the \"Delete card\" action and always prepending cards in front of the last card, since it is designed to always be last.",
+            "p",
+            "But, with this new invention i am more prone to update with new cards for each project...",
+            "p",
+            "Also, with this new project I updated the card.json format so that I now can include images and links into my cards! I detect them via this simple syntax for links:(Title for link)[http://link] and for images: (Image alt-title)[http://link]{A possible text for images, however not needed}. However, right now they have to be on their own line.",
+            "li",
+            {
+                "alt": "Like so...",
+                "href": "http://www.oskarjansson.com/random"
+            },
+            "p",
+            "But I find it to be an OK start, since it was kind of hell changing the card.json format... I will need to update the index.html to take a better care for links and the like, need to figure out a way to parse them in line and yeah, that's a whole another RegEx..."
+        ],
+        "_description": "I made an editor to edit these cards more easily",
+        "_headeralt": "Image detail over my JsonEditor",
+        "_headerhref": "json-editor.jpg",
+        "_id": 4,
+        "_title": "JsonEditor"
     },
     {
         "_content": [
@@ -103,7 +138,7 @@
         "_description": "The last Card",
         "_headeralt": "It's a me!",
         "_headerhref": "face.png",
-        "_id": 4,
+        "_id": 5,
         "_title": "Last Card"
     }
 ]

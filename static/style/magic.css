@@ -139,8 +139,15 @@ h1 {
   padding: 2%;
 }
 
-.text {
+.card-back-text {
   text-align: justify;
+}
+.card-back-link {
+    color: black;
+    text-decoration: none;
+}
+.card-back-link:hover {
+    text-decoration: underline;
 }
 
 .description {

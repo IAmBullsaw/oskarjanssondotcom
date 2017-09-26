@@ -15,15 +15,6 @@ def index():
     cards = d.get_cards()
     return render_template('index.html', cards = cards, n = None, c_length=len(cards))
 
-@app.route('/random/')
-def random_card():
-    d.load_JSON('data.json')
-    cards = d.get_cards()
-
-    r = randint(0, len(cards)-1)
-    url = '/' + str(r)
-    return redirect(url, code=302)
-
 @app.route('/linkedin/')
 def linkedin():
     return redirect('https://www.linkedin.com/in/oskarjansson', code=302)
@@ -36,28 +27,38 @@ def git():
 def contact():
     return render_template('contact.html')
 
-@app.route('/<n>')
-def number(n):
-    """ Renders index page with specific card enhanced, 404 if none found. Handles /random """
-    app.logger.info("User searched for <n>='{}'".format(n))
-    try:
-        n = int(n)
-    except:
-        # If user requested a random page, redirect them
-        if n == 'random':
-            return error_404("<n> = 'random'","Helpful tip: Don't forget the trailing slash!")
-        else:
-            # n is not a valid integer
-            return error_404("/<n> not an integer","Helpful tip: I do not consider '{}' to be a number.".format(n))
-
+@app.route('/p/random/')
+def random_card():
     d.load_JSON('data.json')
     cards = d.get_cards()
 
-    # Serve indexpage with project enhanced
-    if (n >= 0 and n < len(cards)):
-        return render_template('index.html',cards = cards, n = -(n+1), c_length=len(cards))
-    else:
-        return error_404("404 - Not Found","Helpful tip: Try something more like 0 - {}.".format(len(cards)-1))
+    r = randint(0, len(cards)-1)
+    url = '/' + str(r)
+    return redirect(url, code=302)
+
+@app.route('/p/<project>')
+def title(project):
+    app.logger.info("User searched for <title>='{}'".format(title))
+    d.load_JSON('data.json')
+    cards = d.get_cards()
+
+    try:
+        # Searched with index
+        n = int(project)
+        if (n >= 0 and n < len(cards)):
+            return render_template('index.html',cards = cards, n = -(n+1), c_length=len(cards))
+        else:
+            return error_404("404 - Not Found","Helpful tip: Try something more like 0 - {}.".format(len(cards)-1))
+    except:
+        if project == 'random':
+            # If user requested a random page, redirect them
+            return error_404("<project> = 'random'","Helpful tip: Don't forget the trailing slash!")
+        else:
+            # User searched for a project
+            for c in cards:
+                if c._title.lower() == project.lower():
+                    return render_template('index.html',cards = cards, n = c._id, c_length=len(cards))
+            return error_404("<project> = {}".format(project),"Helpful tip: My website isn't that large right now, try looking for it manually...")
 
 @app.errorhandler(400)
 def error_400(error, message = None):

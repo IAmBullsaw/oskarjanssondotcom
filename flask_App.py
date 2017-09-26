@@ -33,7 +33,7 @@ def random_card():
     cards = d.get_cards()
 
     r = randint(0, len(cards)-1)
-    url = '/' + str(r)
+    url = '/p/' + str(r)
     return redirect(url, code=302)
 
 @app.route('/p/<project>')

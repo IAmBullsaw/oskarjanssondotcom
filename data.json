@@ -102,7 +102,7 @@
             "li",
             {
                 "alt": "Read about it here on my LinkedIn",
-                "href": "http:://www.oskarjansson.com/linkedin"
+                "href": "http://www.oskarjansson.com/linkedin"
             },
             "p",
             "so it was a no brainer using it on my spare time during this project.",
@@ -117,7 +117,7 @@
             "li",
             {
                 "alt": "Like so...",
-                "href": "http://www.oskarjansson.com/random"
+                "href": "http://www.oskarjansson.com/p/random"
             },
             "p",
             "But I find it to be an OK start, since it was kind of hell changing the card.json format... I will need to update the index.html to take a better care for links and the like, need to figure out a way to parse them in line and yeah, that's a whole another RegEx..."

@@ -29,7 +29,7 @@
             "p",
             "After building a cardclass I began building the website implementation in Flask. This part was actually really fun since I've been working with Flask before and everything just came together, but as a horrible eye-sore since no CSS were applied. That was the next step.",
             "p",
-            "I think I wrestled with the CSS like a madman. I have yet to try out Less, Sass and all those really nice tools. I just went at it like a caveman. After an insane amount of headache inducing 'width: 100%', I found out that the smart thing is to divide the website in rows and columns. This helped an insane amount with the overall size issues I had... We should however not talk about designing mobile-friendly websites. That is a thing of this sites future.",
+            "I think I wrestled with the CSS like a madman. I have yet to try out Less, Sass and all those really nice tools (Edit: I've tried them out now! They are sweet tools. Try them out you too!). I just went at it like a caveman. After an insane amount of headache inducing 'width: 100%', I found out that the smart thing is to divide the website in rows and columns. This helped an insane amount with the overall size issues I had... We should however not talk about designing mobile-friendly websites. That is a thing of this sites future.",
             "p",
             "To make the cards act like I wanted them to I had to use Javascript. Before I continue to ramble on and on, I feel like I have to tell you that I never intended to use Javascript for a website. Somehow it feels that a website only gets more complicated to use when one needs to take this magical tool in use. However, I wanted to try this card-thing out!",
             "p",
@@ -46,17 +46,19 @@
     {
         "_content": [
             "p",
-            "no-shift is a script language I and Magnus Jansson (sadly, we're not related.) created. All files ending with '.ns' is parsed with parser written in ruby which translated the program via extensive rules, defined by the no-shift EBNF. The translation resulted in a node tree which could be evaluated at any time.",
+            "no-shift is a script language I and Magnus Jansson created, and no we're sadly not related. All files ending with '.ns' is parsed with parser written in ruby which translated the program via an extensive set of rules, defined by the no-shift EBNF. The translation resulted in a node tree which could be evaluated at any time.",
             "p",
             "Our goal was to create a language where you never needed to use shifted characters on the keyboard, therefore the only valid characters were:",
             "p",
             "abcdefghijklmnopqrstuvwxyz‘-.,<+",
             "p",
-            "and this limitation made the task horribly tough and really fun since we lost a lot of delimiters such as, (), [] and {}. It turned out that delimiters would help really really much...",
+            "and this limitation made the task horribly tough and really fun since we lost a lot of delimiters such as, (), [] and {}. It turned out that delimiters would help a lot when parsing a language...",
             "p",
-            "A small code example, which also demonstrates the third bool maybe:",
+            "A small code example, which also demonstrates the third bool named maybe:",
             "p",
-            "<< A program that might print 'Hello World' in the terminal <<\nmessage isnow ‘Hello’\nmessage isnow message inc ‘ world!’\nif maybe then output message ifnot then nope\nno-shift got a quite extensive EBNF grammar however not all were implemented due to loss of time.",
+            "<< A program that might print 'Hello World' in the terminal <<\nmessage isnow ‘Hello’\nmessage isnow message inc ‘ world!’\nif maybe then output message ifnot then nope",
+            "p",
+            "no-shift got a quite extensive EBNF grammar however not all were implemented due to loss of time.",
             "p",
             "The slideshow from the official presentation of no-shift were published on no-shift.com,  the webpage is sadly not online anymore. On the bright side:",
             "li",
@@ -76,11 +78,11 @@
             "p",
             "I designed the most beautiful website I've done to this date. Well, the album art helped a lot!",
             "p",
-            "The website is a one page site currently hosted by GitHub pages. It is designed to take you where you'd expect you should end up when going to an artists site: The music.",
+            "The website is a one page site currently hosted by GitHub. It is designed to take you where you'd expect you should end up when landing on an artists site: The music.",
             "p",
-            "Kamya's latest release is up front and the user sees the albums track list. The tracks are clickable and onClick() will play the corresponding tracks teaser.\\nWhen the user scrolls down she/he sees there's links to related music services and othersocial media links.",
+            "Kamya's latest release is up front and the user sees the albums track list. The tracks are clickable and onClick() will play the corresponding tracks teaser. When the user scrolls down she/he sees there's links to related music services and othersocial media links.",
             "p",
-            "This is my first ever attempt at a responsive site, and it came up fully functional and looks professional.",
+            "This is my first ever attempt at a responsive site, and it came up fully functional and actually looks professional. Kudos to me!",
             "li",
             {
                 "alt": "www.kamya.se",
@@ -96,22 +98,20 @@
     {
         "_content": [
             "p",
-            "So I made an editor for my card.json database that for these cards.",
+            "So I made an editor for my card.json database that holds the data for these project cards.",
             "p",
-            "I used QTCreator for this project since I found it really easy to make something with this software, since i used it in a cool school project for a large company here in sweden,",
+            "I used QTCreator for this project since I recently worked in a larger project with this software, in a really cool school project for a large company here in sweden,",
             "li",
             {
                 "alt": "Read about it here on my LinkedIn",
                 "href": "http://www.oskarjansson.com/linkedin"
             },
             "p",
-            "so it was a no brainer using it on my spare time during this project.",
+            "I learned that it's quite tough to build a text editor even with so much help, finding out if a text field has been edited, how to know when to save data, what to do if the user is closing the editor and data has been changed et.c. There is a lot of things to think about.",
             "p",
-            "I learned that it's quite tough to build an text editor even with so much help, finding out if a text field has been edited, how to know when to save data, what to do if the user is closing the editor and data has been changed et.c. There is a lot of things to think about.",
+            "However right now it's fully functional. I have yet to do some things, implementing the \"Delete card\" action (It's implemented now!) and always prepending cards in front of the last card, since it is designed to always be last. (Also fixed!)",
             "p",
-            "However right now it's fully functional. I have yet to do some things, implementing the \"Delete card\" action and always prepending cards in front of the last card, since it is designed to always be last.",
-            "p",
-            "But, with this new invention i am more prone to update with new cards for each project...",
+            "But, with this new invention i am more prone to update with new cards for each project... (Edit: haha, I am extremely bad at updating this either way...)",
             "p",
             "Also, with this new project I updated the card.json format so that I now can include images and links into my cards! I detect them via this simple syntax for links:(Title for link)[http://link] and for images: (Image alt-title)[http://link]{A possible text for images, however not needed}. However, right now they have to be on their own line.",
             "li",
@@ -131,6 +131,27 @@
     {
         "_content": [
             "p",
+            "Made a game during my first ever global game jam with people I've never seen before! How cool is that? Super cool!",
+            "p",
+            "I chose to work in Unity and the rest of the group I happened to happen with, thought the same way. Never before had I or the others worked with this tool (except for one member of the group who'd practiced with two tutorials the same week! Such effort, I'm impressed.) and this was an unexpectedly difficult tool to work with. At least if you look at how to wrap your head around all new things. Dropping scripts on objects, instead of applying them in a constantly running while loop some where... Even if I still do not really understand how I should build games in this large framework, I think i will at least try to make some more games in it before I get back into my comfort zone with SDL2 and the likes. Well until I try out the next framework... ",
+            "p",
+            "I am actually really proud of the results since even though it wasn't nearly finished, attendees enjoyed our game!",
+            "p",
+            "The music was horribly contageous, a little something I whipped up by recording one group member and just cutting his voice up into samples and you know, arranged them by hi-hat, snare, base drum et.c. and sang in a little more background tones. Super catchy hit song.",
+            "p",
+            "My main contributions to the project were the Music and sound effects, general programming and asking for help of other attendees with better knowledge of Unity. Because after 3h stuck on a \"simple\" problem, when the group next door creates a cowboy game in VR you feel really dumb and slow, so you ask for a lot of help from people who know things. This is also how you learn and make friends hehe.",
+            "p",
+            "I'm really looking forward to my next gamejam, even if the week after felt the repercussions of a weekends sleep deprived state"
+        ],
+        "_description": "2 player game made during GGJ18",
+        "_headeralt": "A plus pole, a minus pole, the two players and some green boxes",
+        "_headerhref": "minusvsplus.png",
+        "_id": 5,
+        "_title": "Minus vs Plus"
+    },
+    {
+        "_content": [
+            "p",
             "This is the backside of the last card.",
             "p",
             "I never thought anyone would actually get this far into my site, or even care to look around. Thank you soo much! Feel free to contact me if you'd like."
@@ -138,7 +159,7 @@
         "_description": "The last Card",
         "_headeralt": "It's a me!",
         "_headerhref": "face.png",
-        "_id": 5,
+        "_id": 6,
         "_title": "Last Card"
     }
 ]
